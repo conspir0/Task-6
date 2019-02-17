@@ -192,6 +192,10 @@ a:hover {
   height: 75vh;
 }
 
+.logo-mobile {
+  display: none;
+}
+
 @media screen and (max-width: 499px) {
   .logo-mobile {
     position: absolute;
@@ -199,6 +203,81 @@ a:hover {
     top: 0;
     left: 50%;
     transform: translate(-50%, 50%);
+  }
+}
+
+.section {
+  position: absolute;
+  z-index: 3;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+}
+
+.jumbotron {
+  text-align: center;
+}
+
+.jumbotron-title {
+  margin: 0 0 50px;
+  font-family: "Lobster";
+  font-size: 72px;
+}
+
+.jumbotron-button {
+  font-size: 14px;
+  font-family: "Josefin Sans";
+  font-weight: 400;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 50px;
+  background: #ddbe5c;
+  background: linear-gradient(90deg, #ddbe5c 25%, #cda628 75%);
+  color: #fff;
+  letter-spacing: 3px;
+  cursor: pointer;
+  outline: none;
+  padding: 22px 50px 20px;
+  height: 60px;
+  line-height: 20px;
+}
+
+@media screen and (min-width: 767px) and (max-width: 1023px) {
+  .jumbotron-title {
+    margin: 0 0 30px;
+    font-size: 50px;
+  }
+  .jumbotron-button {
+    padding: 12px 35px 10px;
+    height: auto;
+    font-size: 12px;
+    letter-spacing: 2px;
+  }
+}
+
+@media screen and (min-width: 500px) and (max-width: 766px) {
+  .jumbotron-title {
+    margin: 0 0 30px;
+    font-size: 40px;
+  }
+  .jumbotron-button {
+    padding: 7px 25px 5px;
+    height: auto;
+    font-size: 10px;
+  }
+}
+
+@media screen and (max-width: 499px) {
+  .jumbotron-title {
+    margin: 0 0 30px;
+    font-size: 30px;
+  }
+  .jumbotron-button {
+    padding: 7px 25px 5px;
+    height: auto;
+    font-size: 10px;
+    letter-spacing: 1px;
   }
 }
 

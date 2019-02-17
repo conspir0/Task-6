@@ -24,6 +24,10 @@ a:hover {
     height: 75vh;
 }
 
+.logo-mobile {
+    display: none;
+}
+
 // RWD
 //-----------------------------------------------------
 @include mediaSm {

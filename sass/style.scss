@@ -13,6 +13,21 @@ $secondary-font: 'Lobster';
     transition: all 0.3s ease-out;
 }
 
+@mixin button {
+        font-size: 14px;
+        font-family: $primary-font;
+        font-weight: 400;
+        text-transform: uppercase;
+        border: none;
+        border-radius: 50px;
+        background: $secondary-color;
+        background: linear-gradient(90deg, $secondary-color 25%, $third-color 75%);
+        color: $primary-color;
+        letter-spacing: 3px;
+        cursor: pointer;
+        outline: none;
+}
+
 // Media Query Mixins
 //-----------------------------------------------------
 @mixin mediaSm {
@@ -38,4 +53,5 @@ $secondary-font: 'Lobster';
 @import 'nav';
 @import 'mobile-nav';
 @import 'main';
+@import 'jumbotron';
 @import 'footer';

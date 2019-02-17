@@ -1,0 +1,82 @@
+.section {
+    position: absolute;
+    z-index: 3;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+}
+// MAIN
+.jumbotron {
+    text-align: center;
+    
+    // Title
+    &-title {
+        margin: 0 0 50px;
+        font-family: $secondary-font;
+        font-size: 72px;
+    }
+    
+    // Button
+    &-button {
+        @include button;
+        padding: 22px 50px 20px;
+        height: 60px;
+        line-height: 20px;
+    }
+}
+
+// RWD
+//-----------------------------------------------------
+@include mediaLg {
+    // SECTION
+    .jumbotron {
+        // Title
+        &-title {
+            margin: 0 0 30px;
+            font-size: 50px;
+        }
+        // Button
+        &-button {
+            padding: 12px 35px 10px;
+            height: auto;
+            font-size: 12px;
+            letter-spacing: 2px;
+        }
+    }
+}
+
+@include mediaMd {
+    // SECTION
+    .jumbotron {
+        // Title
+        &-title {
+            margin: 0 0 30px;
+            font-size: 40px;
+        }
+        // Button
+        &-button {
+            padding: 7px 25px 5px;
+            height: auto;
+            font-size: 10px;
+        }
+    }
+}
+
+@include mediaSm {
+    // SECTION
+    .jumbotron {
+        // Title
+        &-title {
+            margin: 0 0 30px;
+            font-size: 30px;
+        }
+        // Button
+        &-button {
+            padding: 7px 25px 5px;
+            height: auto;
+            font-size: 10px;
+            letter-spacing: 1px;
+        }
+    }
+}
