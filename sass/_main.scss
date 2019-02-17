@@ -1,0 +1,25 @@
+body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    background: url(../images/background-calm-clouds.jpg) center/cover no-repeat;
+    color: #fff;
+    font-family: $primary-font;
+    font-weight: 300;
+    font-size: 11px;
+    letter-spacing: 2px;  
+}
+
+a:hover {
+    color: $secondary-color;
+}
+
+//Gradient
+.main {
+    position: relative;
+    z-index: 2;
+    background: linear-gradient(180deg, rgba(0,0,0,.6) 10%, transparent 75%);
+    height: 75vh;
+}
