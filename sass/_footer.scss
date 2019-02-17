@@ -1,0 +1,103 @@
+// FOOTER
+.footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 0 5vw;
+    background: rgba(0, 0, 0, 0.8);
+    color: $primary-color;
+    
+    &-container {
+        display: grid;
+        grid-template-areas: 'copyright cookies-and-pp author';
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+// Box
+.footer-box {
+    height: 50px;
+    line-height: 50px;
+    
+    &-link {
+        color: $primary-color;
+        text-decoration: none;
+        cursor: pointer;
+    }
+}
+
+// Box - Copyright
+.box-copyright {
+    text-align: left;
+    grid-area: copyright;
+    text-transform: uppercase;
+    font-weight: normal;
+}
+
+// Box - Cookies and pp
+.box-cookies-and-pp {
+    grid-area: cookies-and-pp;
+    text-align: center;
+    
+    .box-sign {
+        padding: 0 10px;
+    }
+}
+
+// Box - Author
+.box-author {
+    grid-area: author;
+    text-align: right;
+    
+    .author-bold{
+        font-weight: 600;
+    }
+}
+
+// RWD
+//-----------------------------------------------------
+@include mediaLg {
+    // FOOTER
+    .footer {
+        
+        font-size: 10px;
+        letter-spacing: 1px;
+    }    
+    // Box
+    .footer-box {
+        height: 40px;
+        line-height: 40px;
+    }
+}
+
+@include mediaMd {
+    // FOOTER
+    .footer {
+        font-size: 8px;
+        letter-spacing: 1px;
+    }    
+    // Box
+    .footer-box {
+        height: 35px;
+        line-height: 35px;
+    }
+}
+
+@include mediaSm {
+    // Grid
+    .footer-container {
+        display: grid;
+        grid-template-areas: 'cookies-and-pp' 'copyright' 'author';
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+    // Box
+    [class*='box-'] {
+        font-size: 8px;
+        height: 25px;
+        line-height: 25px;
+        text-align: center;
+        letter-spacing: .5px;
+    }    
+}

@@ -23,4 +23,94 @@ a:hover {
   height: 75vh;
 }
 
+.footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 0 5vw;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-areas: 'copyright cookies-and-pp author';
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.footer-box {
+  height: 50px;
+  line-height: 50px;
+}
+
+.footer-box-link {
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.box-copyright {
+  text-align: left;
+  grid-area: copyright;
+  text-transform: uppercase;
+  font-weight: normal;
+}
+
+.box-cookies-and-pp {
+  grid-area: cookies-and-pp;
+  text-align: center;
+}
+
+.box-cookies-and-pp .box-sign {
+  padding: 0 10px;
+}
+
+.box-author {
+  grid-area: author;
+  text-align: right;
+}
+
+.box-author .author-bold {
+  font-weight: 600;
+}
+
+@media screen and (min-width: 767px) and (max-width: 1023px) {
+  .footer {
+    font-size: 10px;
+    letter-spacing: 1px;
+  }
+  .footer-box {
+    height: 40px;
+    line-height: 40px;
+  }
+}
+
+@media screen and (min-width: 500px) and (max-width: 766px) {
+  .footer {
+    font-size: 8px;
+    letter-spacing: 1px;
+  }
+  .footer-box {
+    height: 35px;
+    line-height: 35px;
+  }
+}
+
+@media screen and (max-width: 499px) {
+  .footer-container {
+    display: grid;
+    grid-template-areas: 'cookies-and-pp' 'copyright' 'author';
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+  }
+  [class*='box-'] {
+    font-size: 8px;
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+    letter-spacing: .5px;
+  }
+}
+
 /*# sourceMappingURL=style.css.map */
