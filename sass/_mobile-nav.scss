@@ -1,0 +1,96 @@
+// Menu burger btn
+.menu-burger-btn {
+    position: fixed;
+    display: none;
+    z-index: 15;
+    top: 1.5%;
+    right: 5%;
+    transform: translate(-50%, 50%);
+    width: 40px;
+    height: 40px;
+    border: 2px solid $primary-color;
+    border-radius: 10px;
+    cursor: pointer;
+    
+    .btn-line {
+        position: relative;
+        left: 5px;
+        right: 5px;
+        width: 70%;
+        margin-top: 8px;
+        border: 1px solid $primary-color;
+        background: $primary-color;    
+    }
+    
+    // Menu burger btn "X"
+    &.close {
+        border-color: $fourth-color;
+        .btn-line {
+            // Line 1 Rotate
+            &:nth-child(1) {
+                border-color: $fourth-color;
+                transform: rotate(45deg) translate(8px, 8px);
+            }
+            // Line 2 Hide
+            &:nth-child(2) {
+                opacity: 0;
+            }
+            // Line 3 Rotate
+            &:nth-child(3) {
+                border-color: $fourth-color;
+                transform: rotate(-45deg) translate(6px, -6px);
+            }
+        }
+    }
+}
+
+// Menu mobile
+.menu-burger {
+    position: absolute;
+    display: none;
+    top: 0;
+    left: 0;
+    right: 0;
+//    height: 100vh;
+    margin: 0;
+    padding: 20vh 0 0;
+    background: rgba(255,255,255, 0.9);
+    list-style-type: none;
+      
+    &-item {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 20vh;
+        text-align: center;
+    }
+    
+    &-link {
+        width: 100%;
+        font-size: 40px;
+        color: $fourth-color;
+        line-height: 20vh;
+        text-decoration: none;
+        text-transform: uppercase;
+        @include easeOut;
+        
+        &:hover {
+            background: rgba(255,255,255, 1);
+        }
+    }
+}
+
+// Menu mobile - JS
+.show {
+    display: block;
+}
+
+// RWD
+//-----------------------------------------------------
+@include mediaSm {
+    // MENU burger button
+    .menu-burger-btn {
+        display: block;
+    }
+}

@@ -23,3 +23,16 @@ a:hover {
     background: linear-gradient(180deg, rgba(0,0,0,.6) 10%, transparent 75%);
     height: 75vh;
 }
+
+// RWD
+//-----------------------------------------------------
+@include mediaSm {
+    // Logo mobile
+    .logo-mobile {
+        position: absolute;
+        display: block;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, 50%);
+    }
+}

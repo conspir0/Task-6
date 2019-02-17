@@ -78,16 +78,8 @@
 }
 
 @include mediaSm {
-    // Logo mobile
-    .logo-mobile {
-        display: block;
-    }
     // MENU
     .menu {
         display: none;
-    }
-    // MENU - Burger button
-    .menu-burger-btn {
-        display: block;
     }
 }
