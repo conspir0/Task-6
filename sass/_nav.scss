@@ -1,0 +1,93 @@
+.nav {
+    position: relative;
+    z-index: 5;
+}
+
+// MENU
+.menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 25px;
+    
+    .menu-item {
+        width: 150px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+// MENU - LINKS
+.menu-link {
+    font-size: 13px;
+    font-weight: 600;
+    color: $primary-color;
+    text-decoration: none;
+    text-transform: uppercase;
+    height: 100px;
+    line-height: 100px;
+}
+
+// MENU - LOGO
+.menu-logo {
+    @include easeOut;
+    
+    &:hover {
+        transform: scale(1.5);
+        transform: rotate(360deg);
+    }
+}
+
+// RWD
+//-----------------------------------------------------
+@include mediaLg {
+    // MENU
+    .menu {
+        padding: 0 10px;
+
+        .menu-item {
+            width: 100px;
+        }
+    }
+    // Links
+    .menu-link {
+        font-size: 10px;
+    }
+}
+    
+@include mediaMd {
+    // MENU
+    .menu {
+        padding: 0 10px;
+        
+        .menu-item {
+            width: 75px;
+        }
+    }
+    // Links
+    .menu-link {
+        font-size: 8px;
+    }
+    // Logo
+    .menu-logo {
+        transform: scale(.75);
+    }
+}
+
+@include mediaSm {
+    // Logo mobile
+    .logo-mobile {
+        display: block;
+    }
+    // MENU
+    .menu {
+        display: none;
+    }
+    // MENU - Burger button
+    .menu-burger-btn {
+        display: block;
+    }
+}
