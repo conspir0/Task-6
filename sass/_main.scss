@@ -16,7 +16,14 @@ a:hover {
     color: $secondary-color;
 }
 
-//Gradient
+// Remove input border
+input[type=text] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+// Gradient
 .main {
     position: relative;
     z-index: 2;

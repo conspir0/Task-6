@@ -176,6 +176,12 @@ a:hover {
   color: #ddbe5c;
 }
 
+input[type=text] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
 .main {
   position: relative;
   z-index: 2;
@@ -314,6 +320,7 @@ a:hover {
 .popup-email {
   margin: 20px 40px;
   border: none;
+  border-radius: 0;
   border-bottom: 1px solid #333;
   text-align: center;
   font-size: 15px;
@@ -324,6 +331,7 @@ a:hover {
 .popup-password {
   margin: 20px 40px;
   border: none;
+  border-radius: 0;
   border-bottom: 1px solid #333;
   text-align: center;
   font-size: 15px;
