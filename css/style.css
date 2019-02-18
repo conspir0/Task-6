@@ -295,6 +295,59 @@ a:hover {
   transform: translate3d(-50%, -50%, 0);
 }
 
+.popup {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.popup-title {
+  color: #333;
+  margin: 0;
+  text-align: center;
+  padding: 30px 20px 10px;
+  letter-spacing: 1px;
+}
+
+.popup-email {
+  margin: 20px 40px;
+  border: none;
+  border-bottom: 1px solid #333;
+  text-align: center;
+  font-size: 15px;
+  padding: 10px;
+  outline: none;
+}
+
+.popup-password {
+  margin: 20px 40px;
+  border: none;
+  border-bottom: 1px solid #333;
+  text-align: center;
+  font-size: 15px;
+  padding: 10px;
+  outline: none;
+}
+
+.popup-button {
+  font-size: 14px;
+  font-family: "Josefin Sans";
+  font-weight: 400;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 50px;
+  background: #ddbe5c;
+  background: linear-gradient(90deg, #ddbe5c 25%, #cda628 75%);
+  color: #fff;
+  letter-spacing: 3px;
+  cursor: pointer;
+  outline: none;
+  padding: 15px 30px;
+  margin: 20px 40px 30px;
+}
+
 .footer {
   position: absolute;
   bottom: 0;
